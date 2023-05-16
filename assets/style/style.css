@@ -6,11 +6,15 @@
 }
 /* Bodys */
 #index,
-#contact{
+#contact,
+#information{
     overflow: hidden;
 }
 
-
+#information main h2,
+#benefiTips main h2{
+    text-decoration: underline;
+}
 
 /* Inicio del header */
 
@@ -37,7 +41,7 @@ header nav ul li a{
     color: white;
 }
 
-header nav  img{
+.logo img{
     height: 4.5rem;
 }
 
@@ -49,6 +53,10 @@ header nav  img{
 
 main{
     min-height: 80vh;
+}
+
+img{
+    border-radius: 15%;
 }
 
 h1,
@@ -91,7 +99,7 @@ section{
 
 main h1{
     text-align: center;
-    margin: 1rem;
+    margin: .6rem;
 }
 
 /* About us */
@@ -150,6 +158,46 @@ main h1{
     text-align: center;
 }
 
+/* Information */
+
+.tableContainer{
+    display: flex;
+    justify-content: center;
+    margin: .5rem;
+}
+
+table{
+    width: 25rem;
+    height: 25rem;
+    text-align: center;
+
+}
+table,
+tr,
+th,
+td{
+    border: 1px solid black;
+}
+
+/* BenefitsTips */
+
+.containerBenefiTips div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.containerBenefiTips div ol{
+    margin: 3rem 2rem;
+}
+
+.containerBenefiTips div img{
+    width: 13rem;
+    height: 13rem;
+}
+
+
 /* Footer */
 
 footer{
@@ -159,6 +207,6 @@ footer{
 
 footer p{
     text-align: center;
-
+    padding-top: 1rem;
     color: white;
 }
