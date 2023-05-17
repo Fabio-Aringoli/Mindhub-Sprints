@@ -69,9 +69,6 @@ h2,
     text-decoration: underline;
 }
 
-section{
-    margin: .5rem;
-}
 .section1{
     height: 10rem;
     width: 100%;
@@ -114,6 +111,8 @@ main h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
 }
 
 .sectionAbout div img{
@@ -183,13 +182,14 @@ td{
 
 .containerBenefiTips div{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     margin: 1rem;
 }
 
 .containerBenefiTips div ol{
-    margin: 3rem 2rem;
+    margin: 1rem 2rem;
+    width: 50%;
 }
 
 .containerBenefiTips div img{
