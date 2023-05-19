@@ -5,14 +5,10 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 /* Bodys */
-#index,
-#contact,
-#information{
-    overflow: hidden;
-}
 
 #information main h2,
-#benefiTips main h2{
+#benefiTips main h2,
+#raffle h1{
     text-decoration: underline;
 }
 
@@ -21,17 +17,21 @@
 header{
     height: 10vh;
     width: 100%;
-    display: inline-block;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
     background-color: rgb(0, 162, 255);
 }
 
-.logo{
-    float: right;
+.logo {
+    object-fit: contain;
 }
 
 header nav ul{
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
 }
 
 
@@ -41,8 +41,13 @@ header nav ul li a{
     color: white;
 }
 
+.logo{
+    height: 100%;
+}
+
 .logo img{
-    height: 4.5rem;
+    height: 3.5rem;
+    object-fit: cover;
 }
 
 .current{
@@ -55,10 +60,6 @@ main{
     min-height: 80vh;
 }
 
-img{
-    border-radius: 15%;
-}
-
 h1,
 h2,
 .textosAbout{
@@ -69,19 +70,25 @@ h2,
     text-decoration: underline;
 }
 
+/* Index */
+
 .section1{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section1 img{
     height: 10rem;
-    width: 100%;
-    background-image: url(../image/girl.jpg);
-    background-size: cover;
-    background-position: 100%;
+    width: 80%;
+    object-fit: cover;
 }
 
 .section2{
-    margin-top: 3rem;
-    height: 10rem;
+    height: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -90,8 +97,11 @@ h2,
 }
 
 .section2 img{
+    margin-bottom: 2rem;
     height: 15rem;
-    width: 15rem;
+    object-fit: contain;
+    border-radius: 25%;
+    box-shadow: 0px 9px 10px 0px #000;
 }
 
 main h1{
@@ -100,24 +110,23 @@ main h1{
 }
 
 /* About us */
-.containerAbout{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .sectionAbout div{
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     margin-top: .5rem;
     margin-bottom: .5rem;
 }
 
 .sectionAbout div img{
-    height: 12rem;
-    width: 12rem;
+    margin: 0 0 1rem 0;
+    height: 100%;
+    width: 15rem;
+    object-fit: contain;
+    border-radius: 25%;
+    box-shadow: 0px 9px 10px 0px #000;
 }
 
 .sectionAbout div p{
@@ -138,8 +147,8 @@ main h1{
 }
 
 .contactImgText img{
-    height: 15rem;
-    width: 50%;
+    height: 20rem;
+    object-fit: contain;
 }
 
 .sectionContact .contactP{
@@ -157,27 +166,6 @@ main h1{
     text-align: center;
 }
 
-/* Information */
-
-.tableContainer{
-    display: flex;
-    justify-content: center;
-    margin: .5rem;
-}
-
-table{
-    width: 25rem;
-    height: 25rem;
-    text-align: center;
-
-}
-table,
-tr,
-th,
-td{
-    border: 1px solid black;
-}
-
 /* BenefitsTips */
 
 .containerBenefiTips div{
@@ -193,8 +181,111 @@ td{
 }
 
 .containerBenefiTips div img{
-    width: 13rem;
-    height: 13rem;
+    margin: 0 0 1rem 0;
+    height: 10rem;
+    object-fit: contain;
+    border-radius: 25%;
+    box-shadow: 0px 9px 10px 0px #000;
+}
+
+
+/* Information */
+
+.tableContainer{
+    margin: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table{
+    width: 25rem;
+    height: 25rem;
+    text-align: center;
+
+}
+table,
+tr,
+th,
+td{
+    border: 1px solid black;
+}
+
+/* Raffle */
+
+.containerForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    border-radius: 1rem;
+    color: white;
+    background-color: rgb(0, 162, 255);
+}
+
+legend{
+    text-align: center;
+}
+
+fieldset{
+    border: none;
+}
+
+form .paymentControl{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerForm{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.map{
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.map iframe{
+    margin-top: 1rem;
+    width: 20rem;
+    height: 20rem;
+}
+
+
+.map h2{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+textarea{
+    width: 10rem;
+    height: 5rem;
+}
+
+.checkbox{
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button{
+    padding: .2rem;
+    width: 90%;
+    margin-bottom: .3rem;
+    border-radius: 10rem;
+    color: white;
+    background-color: rgb(0, 162, 255);
 }
 
 
@@ -206,7 +297,120 @@ footer{
 }
 
 footer p{
-    text-align: center;
     padding-top: 1rem;
+    text-align: center;
     color: white;
 }
+
+@media only screen and (max-width: 768px){
+    .checkbox{
+        width: 15rem;
+    }
+}
+@media only screen and (max-width: 425px){
+
+    /* HEADER */
+    header{ 
+        height: 100%;
+        position: sticky;
+        top: 0;
+        flex-direction: column;
+    }
+
+    header nav ul{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul li a{
+        margin-left: 0%;
+    }
+
+    .logo img{
+        height: 3rem;
+    }
+
+    /* INDEX */
+    .section1 img{
+        height: 10rem;
+        width: 90%;
+        object-fit: cover;
+    }
+
+    .section2{
+        flex-direction: column-reverse;
+    }
+
+    .section2 p{
+        width: 75%;
+        text-align: center;
+    }
+
+    /* ABOUT */
+
+    .sectionAbout div{
+        flex-direction: column;
+    }
+
+    .sectionAbout div p{
+        text-align: center;
+    }
+
+    /* CONTACT */
+
+    .contactImgText img{
+        width: 95%;
+    }
+
+    .contactP{
+        flex-direction: column;
+    }
+
+    .sectionContact .contactP p{
+        margin-left: 0%;
+    }
+
+    /* BENEFITIPS */
+
+    .containerBenefiTips div{
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    table{
+        width: 17rem;
+    }
+
+    .tableContainer h2{
+        font-size: medium;
+    }
+
+    /* RAFFLE */
+
+    .containerForm{
+        flex-direction: column-reverse;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form input, form select{
+        width: 100vw;
+    }
+
+    #raffle main h2,h1{
+        font-size:larger;
+    }
+
+    /* FOOTER */
+
+    footer{
+        position: sticky;
+        bottom: 0;
+    }
+}
+

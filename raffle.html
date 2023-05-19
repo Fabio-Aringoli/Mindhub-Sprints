@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindy - Raffle</title>
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="shortcut icon" href="./assets/image/icon.png" type="image/x-icon">
+</head>
+<body id="raffle">
+    <header>
+        <div class="logo"><img src="./assets/image/logo.png" alt="Logo"></div>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./aboutUs.html">About Us</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./benefitsTips.html">BenefitsTips</a></li>
+                <li><a href="./information.html">Information</a></li>
+                <li><a href="#" class="current">Raffle</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>You can collaborate and register for one of our tournaments</h1>
+        <section class="containerForm">
+            <div class="map">
+                <h2>Our location where the tournaments are held is at:</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d450942.73567663156!2d-82.73447112343412!3d27.994198599401237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2b782b3b9d1e1%3A0xa75f1389af96b463!2sTampa%2C%20Florida%2C%20EE.%20UU.!5e0!3m2!1ses-419!2sar!4v1684355189696!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <form action="./show_data.html" method="get">
+                <fieldset>
+                    <legend>First Name</legend>
+                    <label for="fName"></label>
+                    <input type="text" name="firstName" id="fName" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Last Name</legend>
+                    <label for="lName"></label>
+                    <input type="text" name="lastname" id="lName" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Choose Game</legend>
+                    <label for="chooseG"></label>
+                    <select name="game" id="chooseG">
+                        <option value="default">-</option>
+                        <option value="LOL">League of Legends</option>
+                        <option value="VAL">Valorant</option>
+                        <option value="CS">Counter Strike</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Choose Date</legend>
+                    <label for="chooseD"></label>
+                    <select name="date" id="chooseD">
+                        <option value="default">-</option>
+                        <option value="20/08">20/08</option>
+                        <option value="12/10">12/10</option>
+                        <option value="27/11">27/11</option>
+                    </select>
+                </fieldset>
+                <fieldset class="paymentControl">
+                    <legend>Payment Options</legend>
+                    <label for="cash">Cash</label>
+                    <input type="radio" id="cash" name="payment" value="Cash" required>
+
+                    <label for="credit">Credit Card</label>
+                    <input type="radio" id="credit" name="payment" value="credit Card" required>
+
+                    <label for="debit">Debit Card</label>
+                    <input type="radio" id="debit" name="payment" value="debit Card" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Message (Optional)</legend>
+                    <label for="message"></label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </fieldset>
+                <fieldset class="checkbox">
+                    <label for="termsCondition">I accept terms and conditions</label>
+                    <input type="checkbox" name="checkbox" id="termsCondition" value="Accept">
+                </fieldset>
+                    <label for="send"></label>
+                    <button type="submit" id="send">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Created by Fabio Aringoli</p>
+    </footer>
+</body>
+</html>
